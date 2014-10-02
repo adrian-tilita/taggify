@@ -1,0 +1,59 @@
+.tagwrap {
+    border:1px solid #ccc;
+    background: #fdfdfd;
+    font:14px/28px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color:#333;
+    height:auto;
+    width: 398px;
+    padding: 2px;
+}
+    .tagwrap .tag_container {
+        float:left;
+        padding:2px;
+        line-height:22px;
+        border:1px solid #dcdcdc;
+        border-radius:2px;
+        box-shadow:inset 0 5px 12px rgba(0,0,0,0.02);
+        margin:0 2px 2px 0;
+    }
+    .tagwrap .tag_container a {
+        float:right;
+        width:16px;
+        height:16px;
+        font-size:14px;
+        line-height:16px;
+        font-weight:bold;
+        text-decoration:none;
+        text-align:center;
+        margin:3px 1px;
+        color:#000;
+    }
+    .tagwrap .tag_container a:hover { color:#ff5353; }
+    .tagwrap .tag_container:hover { box-shadow:0 0 2px rgba(0,0,0,0.08); }
+    .tagwrap .input {
+        border:none;
+        width:100px;
+        margin:0;
+        padding:0;
+        background:none;
+        line-height:28px;
+        height:28px;
+        outline: none;
+    }
+    .tagwrap .suggestion_container {
+        position:absolute;
+        z-index:1;
+        width:100px;
+        border:1px solid #ccc;
+        background:#fff;
+        border-radius:0 0 3px 3px;
+    }
+    .tagwrap .suggestion_container ul,
+    .tagwrap .suggestion_container ul li { list-style:none; margin:0; padding:4px; }
+    .tagwrap .suggestion_container ul li {
+        border-radius:2px;
+    }
+    .tagwrap .suggestion_container ul li.selected {
+        background:#00c;
+        color:#fff;
+    }

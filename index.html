@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery Taggify - Tag input with autocomplete</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/taggify.js"></script>
+    <link href="css/taggify.css" rel="stylesheet" type="text/css">
+	<style>
+	body {
+		font:14px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: #333;
+	}
+	.wrap {
+		width:1000px;
+		margin:0 auto;
+	}
+	</style>
+</head>
+<body>
+<div class=wrap>
+	<h1>jQuery Autocomplete Tag Suggestion Box</h1>
+	<p>Can be used to autocomplete and suggest tags.</p>
+	<p><strong>Usage example: </strong></p>
+	<code>
+		$('#tags').taggify({
+			tags: [
+				'javascript',
+				'js',
+				'js2',
+				'java',
+				'java script',
+				'ema script',
+				'xhtml',
+				'html5',
+				'php',
+				'asp',
+				'actionscript'
+			]
+		});	
+	</code>
+	<p><strong>Note:</strong> Only tested on Google Chrome, to be revized and fixed for other browsers.</p>
+	<p><strong>To Do's</strong>:</p>
+	<ul>
+		<li>Verify cross-browsing</li>
+		<li>Esc key and outside click to hide suggestion box</li>
+		<li>Backspace or blank value to hide suggestion box</li>
+		<li>Click on the fake input to focus real input</li>
+		<li><strong>Feel free to add to this list</strong></li>
+	</ul>
+	
+	<h2>Live demo</h2>
+	<p>Available tags: 'javascript', 'js', 'js2', 'java', 'java script', 'ema script', 'xhtml', 'html5', 'php', 'asp', 'actionscript'</p>
+	<p>After writing a tag, press <strong>comma</strong> to set the tag as complete.</p>
+	<p>Navigate throw suggestions using arrows, press <strong>Tag</strong> or <strong>Enter</strong> to autocomplete/select suggestion.</p>
+	<form action="{$DOMAIN_BASE}" method="post">
+		<input class="normal_input" type="text" name="tags" value="" id="tags" />
+		<input type="submit" value="Submit">
+	</form>
+</div>
+<script>
+$(document).ready(function() {
+	$('#tags').taggify({
+		tags: [
+			'javascript',
+			'js',
+			'js2',
+			'java',
+			'java script',
+			'ema script',
+			'xhtml',
+			'html5',
+			'php',
+			'asp',
+			'actionscript',
+		]
+	});
+});
+</script>
+</body>
+</html>
