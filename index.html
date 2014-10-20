@@ -54,7 +54,7 @@
 	<p>Navigate throw suggestions using arrows, press <strong>Tag</strong> or <strong>Enter</strong> to autocomplete/select suggestion.</p>
 	<form action="{$DOMAIN_BASE}" method="post">
 		<input class="normal_input" type="text" name="tags" value="test1, test2 , test3,test4" id="tags" />
-		<input type="submit" value="Submit">
+		<input type="button" value="Show value" onclick="alert($('#tags').val());">
 	</form>
 </div>
 <script>

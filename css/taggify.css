@@ -52,6 +52,7 @@
     .tagwrap .suggestion_container ul li { list-style:none; margin:0; padding:4px; }
     .tagwrap .suggestion_container ul li {
         border-radius:2px;
+		cursor:pointer;
     }
     .tagwrap .suggestion_container ul li.selected {
         background:#00c;

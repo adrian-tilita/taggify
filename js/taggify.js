@@ -103,7 +103,13 @@
                     var _list = $('<ul></ul>');
                     var _item_ct = _items.length;
                     for (var i = 0; i < _item_ct; i++) {
-                        var _suggestion = $('<li></li>').html(_items[i]);
+                        var _suggestion = $('<li></li>').html(_items[i]).click(function() {
+							settings.container.find('.suggestion_container li').removeClass('selected');
+							$(this).addClass('selected');
+							settings.current.val($(this).html())
+							handlers.addTag();
+							build.hide_suggestions();
+						});
                         _list.append(_suggestion);
                     }
                     _suggestions_box.append(_list);
@@ -158,14 +164,17 @@
                 }, // end of key
                 // Add Tag
                 addTag: function() {
-                    var _current_val = $(settings.selector).val() != '' ?
-                                        $(settings.selector).val() + settings.separator : '';
-                    var _new_tag = settings.current.val().trim().replace(',','')
-                    $(settings.selector).val(_current_val + _new_tag);
-                    build.tag(_new_tag);
-                    // empty current value
-                    settings.current.val('');
-
+                    var _new_tag = settings.current.val().trim().replace(',','');
+					if (_new_tag != '') {
+						var _current_val = $(settings.selector).val() != '' ?
+											$(settings.selector).val() + settings.separator : '';
+						$(settings.selector).val(_current_val + _new_tag);
+						build.tag(_new_tag);
+						// empty current value
+						settings.current.val('');
+					} else {
+						settings.current.val('');
+					}
                 }, // end of addTag
                 // Search for suggestions
                 searchSuggestions: function() {
