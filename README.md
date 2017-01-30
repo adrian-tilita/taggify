@@ -27,3 +27,5 @@
 	<li>Click on the fake input to focus real input</li>
 	<li><strong>Feel free to add to this list</strong></li>
 </ul>
+
+Example: http://taggify.tilita.ro
